@@ -8,8 +8,13 @@
 /* You can override the default Infima variables here. */
 
 :root {
-  --hue: 30;
-  --saturation: 92%;
+  /* Customize --hue and --saturation for theme customization.
+  uses the hsl(hue, saturation, value) format for tones.
+  */
+  --hue: 290;
+  --saturation: 50%;
+  /* config end */
+
   --ifm-color-primary: hsl(var(--hue), var(--saturation), 59%);
   --ifm-color-primary-dark: hsl(var(--hue), var(--saturation), 49%);
   --ifm-color-primary-darker: hsl(var(--hue), var(--saturation), 39%);

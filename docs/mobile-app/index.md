@@ -8,8 +8,20 @@ import Endpoint from "../../src/components/Endpoint"
 
 # Authentication
 
-All Authentication related endpoints.
+All authentication related endpoints.
+
+## Profile
+
+<Endpoint method="GET" url="/profile" requiresToken
+responseBody={{
+    username: "docusaurus_user",
+    age: 21
+}}>
+Get user's profile information
+</Endpoint>
 
 ## Login
 
-<Endpoint requestBody={{ma: 123, le: "lala"}} />
+<Endpoint method={"POST"} url={`/login`} requiresToken={false} requestBody={{username: "docusaurus_user", password: "easypass123"}}>
+Logs in user with the given credentials.
+</Endpoint>

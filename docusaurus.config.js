@@ -10,6 +10,10 @@ module.exports = {
   organizationName: "egecavusoglu", // Usually your GitHub org/user name.
   projectName: "api-docusaurus", // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: true,
+    },
     navbar: {
       title: "API Docs",
       logo: {
@@ -97,7 +101,10 @@ module.exports = {
         // },
         blog: false,
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: [
+            require.resolve("./src/css/custom.css"),
+            require.resolve("prismjs/themes/prism-tomorrow.css"),
+          ],
         },
       },
     ],

@@ -1,3 +1,8 @@
+# IMPORTANT
+
+Below is the default Readme that comes with Docusaurus, it will be re documented to extend and cover this template specific config and usage examples.
+
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.

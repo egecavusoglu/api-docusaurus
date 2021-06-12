@@ -22,8 +22,8 @@ const Endpoint = ({
         <p>{children}</p>
       </div>
       <div className={styles.container}>
-        {requiresToken && <Token />}
         <Method method={method} />
+        {requiresToken && <Token />}
         <ServerUrl url={url} />
       </div>
       {requestBody && <RequestBody body={requestBody} />}

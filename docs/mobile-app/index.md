@@ -22,6 +22,6 @@ Get user's profile information
 
 ## Login
 
-<Endpoint method={"POST"} url={`/login`} requiresToken={false} requestBody={{username: "docusaurus_user", password: "easypass123"}}>
+<Endpoint method={"POST"} url={`/login`} requiresToken={false} requestBody={{username: "docusaurus_user", password: "easypass123", lang: "EN"}}>
 Logs in user with the given credentials.
 </Endpoint>

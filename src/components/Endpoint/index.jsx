@@ -1,8 +1,11 @@
 import React from "react";
-import { SERVER_URL } from "../../config";
-import "./style.css";
-import Prism from "prismjs";
-// import "prismjs/themes/prism-tomorrow.css";
+import styles from "./Endpoint.module.css";
+
+import Token from "../Token";
+import Method from "../Method";
+import ServerUrl from "../ServerUrl";
+import RequestBody from "../RequestBody";
+import ResponseBody from "../ResponseBody";
 
 const Endpoint = ({
   method = "GET",
@@ -14,36 +17,18 @@ const Endpoint = ({
   ...props
 }) => {
   return (
-    <div className="">
-      <div className="container">
+    <main>
+      <div className={styles.container}>
         <p>{children}</p>
       </div>
-      <div className="container">
-        <label className={`method ${method}`}>{method}</label>
-        {requiresToken && <code className="auth-pre">TOKEN</code>}
-        <code className="server-url">{`${SERVER_URL}${url}`}</code>
+      <div className={styles.container}>
+        {requiresToken && <Token />}
+        <Method method={method} />
+        <ServerUrl url={url} />
       </div>
-      {requestBody && (
-        <div className="container">
-          <p className="title">Request Body</p>
-          <pre>
-            <code className="language-js">
-              {JSON.stringify(requestBody, null, 2)}
-            </code>
-          </pre>
-        </div>
-      )}
-      {responseBody && (
-        <div className="container">
-          <p className="title">Response Body</p>
-          <pre>
-            <code className="language-js">
-              {JSON.stringify(responseBody, null, 2)}
-            </code>
-          </pre>
-        </div>
-      )}
-    </div>
+      {requestBody && <RequestBody body={requestBody} />}
+      {responseBody && <ResponseBody body={responseBody} />}
+    </main>
   );
 };
 export default Endpoint;

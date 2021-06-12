@@ -1,0 +1,22 @@
+.method {
+  font-size: large;
+  margin-right: 18px;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.GET {
+  color: rgb(12, 187, 82);
+}
+
+.POST {
+  color: rgb(255, 180, 0);
+}
+
+.PUT {
+  color: rgb(9, 123, 237);
+}
+
+.DELETE {
+  color: rgb(235, 32, 19);
+}

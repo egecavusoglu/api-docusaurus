@@ -101,10 +101,7 @@ module.exports = {
         // },
         blog: false,
         theme: {
-          customCss: [
-            require.resolve("./src/css/custom.css"),
-            require.resolve("prismjs/themes/prism-tomorrow.css"),
-          ],
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],

@@ -2,7 +2,7 @@
 
 Below is the default Readme that comes with Docusaurus, it will be re documented to extend and cover this template specific config and usage examples.
 
-
+![Image](https://pbs.twimg.com/media/E3VSIY_VIAA_PQ1?format=jpg&name=large)
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
